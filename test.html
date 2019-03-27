@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+	<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+</head>
+
+<body>
+	<div id="test">
+		<i-table :columns="columns11" :data="data10" border height="500"></i-table>
+	</div>
+	
+</body>
+	<script>
+		var app = new Vue({
+			el: '#test',
+			data: {
+				columns11: [
+					{
+                        type: 'selection',
+                        width: 40,
+						align: 'center',
+						fixed: 'left'
+                    },
+					{
+						title: '序号',
+						type: 'index',
+						align: 'center',
+						width: 45,
+						fixed: 'left'
+					},
+					{
+						key: 'test1',
+						align: 'center',
+						title: 'test1',
+						minWidth: 100,
+						fixed: 'left'
+					},
+					{
+						key: 'test2',
+						align: 'center',
+						title: 'test2',
+						minWidth: 100,
+						fixed: 'left'
+					},
+					{
+						key: 'test3',
+						align: 'center',
+						title: 'test3',
+						minWidth: 100,
+						fixed: 'left'
+					},
+					{
+						key: 'test4',
+						align: 'center',
+						title: 'test4',
+						minWidth:120,
+						render: (h, params) => {
+							var value = params.row.test4;
+							value = this.$dataFormat(value, 'yyyy-MM-dd hh:mm');
+							return h('span', value);
+						}
+					},
+					{
+						title: '20test',
+						align: 'center',
+						children:[
+							{
+								title: 'test5',
+								key: 'test5',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test6',
+								key: 'test6',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test7',
+								key: 'test7',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test8',
+								key: 'test8',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test9',
+								key: 'test9',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test10',
+								key: 'test10',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test11',
+								key: 'test11',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test12',
+								key: 'test12',
+								align: 'center',
+								minWidth: 60
+							},
+						]
+					},
+					{
+						title: '40test',
+						align: 'center',
+						children:[
+							{
+								title: 'test13',
+								key: 'test13',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test14',
+								key: 'test14',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test15',
+								key: 'test15',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test16',
+								key: 'test16',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test17',
+								key: 'test17',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test18',
+								key: 'test18',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test19',
+								key: 'test19',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test20',
+								key: 'test20',
+								align: 'center',
+								minWidth: 60
+							},
+						]
+					},
+					{
+						title: '50test',
+						align: 'center',
+						children:[
+							{
+								title: 'test21',
+								key: 'test21',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test22',
+								key: 'test22',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test23',
+								key: 'test23',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test24',
+								key: 'test24',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test25',
+								key: 'test25',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test26',
+								key: 'test26',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test27',
+								key: 'test27',
+								align: 'center',
+								minWidth: 60
+							},
+							{
+								title: 'test28',
+								key: 'test28',
+								align: 'center',
+								minWidth: 60
+							},
+						]
+					},
+					{
+						key: 'test29',
+						align: 'center',
+						title: 'test29',
+						minWidth: 80
+					},
+					{
+						title: 'testTT',
+						align: 'center',
+						children:[
+							{
+								title: 'test30',
+								key: 'test30',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test31',
+								key: 'test31',
+								align: 'center',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						key: 'test32',
+						align: 'center',
+						title: 'test32',
+						minWidth: 80
+					},
+					{
+						key: 'test33',
+						align: 'center',
+						title: 'test33',
+						minWidth: 80
+					},
+					{
+						title: 'testYY',
+						align: 'center',
+						children:[
+							{
+								title: 'test34',
+								key: 'test34',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test35',
+								key: 'test35',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test36',
+								key: 'test36',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test37',
+								key: 'test37',
+								align: 'center',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						title: 'tetqq',
+						align: 'center',
+						children:[
+							{
+								title: 'test38',
+								key: 'test38',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test39',
+								key: 'test39',
+								align: 'center',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						title: 'tea',
+						align: 'center',
+						children:[
+							{
+								title: 'test40',
+								key: 'test40',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test41',
+								key: 'test41',
+								align: 'center',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						title: 'gg',
+						align: 'center',
+						children:[
+							{
+								title: 'test42',
+								key: 'test42',
+								align: 'center',
+								minWidth: 80
+							},
+							{
+								title: 'test43',
+								key: 'test43',
+								align: 'center',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						title: 'bb',
+						align: 'center',
+						fixed: 'right',
+						children:[
+							{
+								title: 'test44',
+								key: 'test44',
+								align: 'center',
+								fixed: 'right',
+								minWidth: 80
+							},
+							{
+								title: 'test45',
+								key: 'test45',
+								align: 'center',
+								fixed: 'right',
+								minWidth: 80
+							},
+						]
+					},
+					{
+						key: 'zt',
+						align: 'center',
+						title: '状态',
+						minWidth: 80,
+						fixed:'right',
+						render: (h, params) => {
+							if (params.row.zt == '0') {
+								return h('div', {
+									style: {
+										fontWeight: 'bold',
+									},
+								}, '未确认')
+							} else if (params.row.zt == '1') {
+								return h('div', {
+									style: {
+										fontWeight: 'bold',
+										color: 'green'
+									},
+								}, '已确认')
+							} else if (params.row.zt == '2') {
+								return h('div', {
+									style: {
+										fontWeight: 'bold',
+										color: '#19be6b'
+									},
+								}, '已支付')
+							}
+						}
+					},
+                ],
+                data10: []
+			},
+			mounted () {
+				const data = [];
+				for (let i = 0; i < 200; i++) {
+					data.push({
+						key: i,
+						test1: i+1,
+					});
+				}
+				this.data10 = data;
+			}
+		})
+	</script>
+</html>
